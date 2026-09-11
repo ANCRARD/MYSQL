@@ -1,0 +1,85 @@
+<mxfile host="app.diagrams.net">
+  <diagram id="diag1" name="Modelo Relacional 3FN">
+    <mxGraphModel dx="1332" dy="698" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1169" pageHeight="826" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell id="cp" parent="1" style="swimlane;whiteSpace=wrap;html=1;startSize=30;fillColor=#d5e8d4;strokeColor=#82b366;fontStyle=1;fontSize=13;align=center;" value="codigos_postales" vertex="1">
+          <mxGeometry height="90" width="220" x="40" y="60" as="geometry" />
+        </mxCell>
+        <mxCell id="cp_r0" parent="cp" style="text;html=1;align=left;verticalAlign=middle;spacingLeft=6;fontStyle=1;fontSize=12;" value="PK   Codigo_Postal" vertex="1">
+          <mxGeometry height="30" width="220" y="30" as="geometry" />
+        </mxCell>
+        <mxCell id="cp_r1" parent="cp" style="text;html=1;align=left;verticalAlign=middle;spacingLeft=6;fontStyle=0;fontSize=12;" value="        Ciudad" vertex="1">
+          <mxGeometry height="30" width="220" y="60" as="geometry" />
+        </mxCell>
+        <mxCell id="pac" parent="1" style="swimlane;whiteSpace=wrap;html=1;startSize=30;fillColor=#dae8fc;strokeColor=#6c8ebf;fontStyle=1;fontSize=13;align=center;" value="pacientes" vertex="1">
+          <mxGeometry height="150" width="240" x="410" y="40" as="geometry" />
+        </mxCell>
+        <mxCell id="pac_r0" parent="pac" style="text;html=1;align=left;verticalAlign=middle;spacingLeft=6;fontStyle=1;fontSize=12;" value="PK   Paciente_DNI" vertex="1">
+          <mxGeometry height="30" width="240" y="30" as="geometry" />
+        </mxCell>
+        <mxCell id="pac_r1" parent="pac" style="text;html=1;align=left;verticalAlign=middle;spacingLeft=6;fontStyle=0;fontSize=12;" value="        NombreCompleto" vertex="1">
+          <mxGeometry height="30" width="240" y="60" as="geometry" />
+        </mxCell>
+        <mxCell id="pac_r2" parent="pac" style="text;html=1;align=left;verticalAlign=middle;spacingLeft=6;fontStyle=0;fontSize=12;" value="        Direccion" vertex="1">
+          <mxGeometry height="30" width="240" y="90" as="geometry" />
+        </mxCell>
+        <mxCell id="pac_r3" parent="pac" style="text;html=1;align=left;verticalAlign=middle;spacingLeft=6;fontStyle=2;fontSize=12;" value="FK   Codigo_Postal" vertex="1">
+          <mxGeometry height="30" width="240" y="120" as="geometry" />
+        </mxCell>
+        <mxCell id="tel" parent="1" style="swimlane;whiteSpace=wrap;html=1;startSize=30;fillColor=#ffe6cc;strokeColor=#d79b00;fontStyle=1;fontSize=13;align=center;" value="paciente_telefonos" vertex="1">
+          <mxGeometry height="120" width="240" x="260" y="350" as="geometry" />
+        </mxCell>
+        <mxCell id="tel_r0" parent="tel" style="text;html=1;align=left;verticalAlign=middle;spacingLeft=6;fontStyle=1;fontSize=12;" value="PK   ID_Telefono" vertex="1">
+          <mxGeometry height="30" width="240" y="30" as="geometry" />
+        </mxCell>
+        <mxCell id="tel_r1" parent="tel" style="text;html=1;align=left;verticalAlign=middle;spacingLeft=6;fontStyle=2;fontSize=12;" value="FK   Paciente_DNI" vertex="1">
+          <mxGeometry height="30" width="240" y="60" as="geometry" />
+        </mxCell>
+        <mxCell id="tel_r2" parent="tel" style="text;html=1;align=left;verticalAlign=middle;spacingLeft=6;fontStyle=0;fontSize=12;" value="        Numero_Telefono" vertex="1">
+          <mxGeometry height="30" width="240" y="90" as="geometry" />
+        </mxCell>
+        <mxCell id="med" parent="1" style="swimlane;whiteSpace=wrap;html=1;startSize=30;fillColor=#f8cecc;strokeColor=#b85450;fontStyle=1;fontSize=13;align=center;" value="medicos" vertex="1">
+          <mxGeometry height="90" width="220" x="820" y="40" as="geometry" />
+        </mxCell>
+        <mxCell id="med_r0" parent="med" style="text;html=1;align=left;verticalAlign=middle;spacingLeft=6;fontStyle=1;fontSize=12;" value="PK   ID_Medico" vertex="1">
+          <mxGeometry height="30" width="220" y="30" as="geometry" />
+        </mxCell>
+        <mxCell id="med_r1" parent="med" style="text;html=1;align=left;verticalAlign=middle;spacingLeft=6;fontStyle=0;fontSize=12;" value="        Medico_Registro" vertex="1">
+          <mxGeometry height="30" width="220" y="60" as="geometry" />
+        </mxCell>
+        <mxCell id="ing" parent="1" style="swimlane;whiteSpace=wrap;html=1;startSize=30;fillColor=#e1d5e7;strokeColor=#9673a6;fontStyle=1;fontSize=13;align=center;" value="ingresos" vertex="1">
+          <mxGeometry height="150" width="240" x="790" y="320" as="geometry" />
+        </mxCell>
+        <mxCell id="ing_r0" parent="ing" style="text;html=1;align=left;verticalAlign=middle;spacingLeft=6;fontStyle=1;fontSize=12;" value="PK   ID_Ingreso" vertex="1">
+          <mxGeometry height="30" width="240" y="30" as="geometry" />
+        </mxCell>
+        <mxCell id="ing_r1" parent="ing" style="text;html=1;align=left;verticalAlign=middle;spacingLeft=6;fontStyle=0;fontSize=12;" value="        Fecha_Hora_Ingreso" vertex="1">
+          <mxGeometry height="30" width="240" y="60" as="geometry" />
+        </mxCell>
+        <mxCell id="ing_r2" parent="ing" style="text;html=1;align=left;verticalAlign=middle;spacingLeft=6;fontStyle=2;fontSize=12;" value="FK   Paciente_DNI" vertex="1">
+          <mxGeometry height="30" width="240" y="90" as="geometry" />
+        </mxCell>
+        <mxCell id="ing_r3" parent="ing" style="text;html=1;align=left;verticalAlign=middle;spacingLeft=6;fontStyle=2;fontSize=12;" value="FK   ID_Medico" vertex="1">
+          <mxGeometry height="30" width="240" y="120" as="geometry" />
+        </mxCell>
+        <mxCell id="e1" edge="1" parent="1" source="cp" style="edgeStyle=entityRelationEdgeStyle;fontSize=12;html=1;startArrow=ERone;startFill=0;endArrow=ERmany;endFill=0;rounded=0;exitX=1;exitY=0.5;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" target="pac_r3" value="">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="e3" edge="1" parent="1" source="pac_r0" style="edgeStyle=entityRelationEdgeStyle;fontSize=12;html=1;startArrow=ERone;startFill=0;endArrow=ERmany;endFill=0;rounded=0;exitX=1;exitY=0.5;entryX=0;entryY=0.5;exitDx=0;exitDy=0;entryDx=0;entryDy=0;" target="ing_r2" value="">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="e4" edge="1" parent="1" source="med" style="edgeStyle=entityRelationEdgeStyle;fontSize=12;html=1;startArrow=ERone;startFill=0;endArrow=ERmany;endFill=0;rounded=0;exitX=1;exitY=0.5;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" target="ing_r3" value="">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="65p_WAdjd4RB0RU-Rga4-1" edge="1" parent="1" source="pac_r0" style="edgeStyle=entityRelationEdgeStyle;fontSize=12;html=1;endArrow=ERmany;rounded=0;exitX=0;exitY=0.5;exitDx=0;exitDy=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" target="tel_r1" value="">
+          <mxGeometry height="100" relative="1" width="100" as="geometry">
+            <mxPoint x="560" y="140" as="sourcePoint" />
+            <mxPoint x="220" y="425" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>
